@@ -39,12 +39,12 @@ const Table = () => {
       "id",
       // object usage
       { name: "createdBy", itens: ["_id", "name", "contact"] }, 	
-	    { name: "service", itens: ["_id", "duration", "price"] },
+	{ name: "service", itens: ["_id", "duration", "price"] },
       "date",
       "status"
     )
   );
-  
+
   // [...]
 };
 ```
