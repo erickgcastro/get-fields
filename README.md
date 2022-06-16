@@ -17,7 +17,7 @@ export function GET_USER() {
   return gql`
     query {
       getUser {
-        ${fields}	// ~> Adds the selected fields inside the *route*
+        ${fields}	// Adds the selected fields inside the *route*
       }
     }`;
 }
@@ -37,13 +37,15 @@ const Table = () => {
   const { data } = useQuery(
     GET_SCHEDULE(
       "id",
-      { name: "createdBy", itens: ["_id", "name", "contact"] }, 	// object usage
-	  { name: "service", itens: ["_id", "duration", "price"] },
+      // object usage
+      { name: "createdBy", itens: ["_id", "name", "contact"] }, 	
+	    { name: "service", itens: ["_id", "duration", "price"] },
       "date",
       "status"
     )
   );
-  //	[...]
+  
+  // [...]
 };
 ```
 
