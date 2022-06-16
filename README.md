@@ -1,12 +1,12 @@
-#Get-Fields
+# Get-Fields
 _**getFields**_ was made with the intention of using the same schemas but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call. 
 
-##Install with npm
+## Install with npm
 ```shell
 npm i get-fields
 ```
 
-##Usage
+## Usage
 For example, if we want to create a schema to access user data, we can use this function in schema creation:
 
 ```javascript
