@@ -88,14 +88,14 @@ The example of using _createdBy_ in graphql schema:
 The above example in graphql schema:
 ```graphql
 query {
-    schedules {
-      date {
-        id
-        location {
-          street
-          house
-        }
+  schedules {
+    date {
+      id
+      location {
+        street
+        house
       }
     }
+  }
 }
 ```
