@@ -1,5 +1,5 @@
 //
-export default function getFields(...args) {
+module.exports = function getFields(...args) {
   let fields = "";
   for (const i of args[0]) {
     switch (typeof i) {
@@ -29,4 +29,4 @@ export default function getFields(...args) {
     }
   }
   return fields;
-}
+};
