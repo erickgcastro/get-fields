@@ -25,7 +25,7 @@ module.exports = function getFields(...args) {
       case "function":
         break;
       default:
-        throw new Error("Invalid type");
+        throw new Error("Invalid type - Only string and nesting object are allowed");
     }
   }
   return fields;

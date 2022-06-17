@@ -37,7 +37,7 @@ const Profile = () => {
 };
 ```
 
-But if you have to access nested data, you must use **_nesting object_** as follows in the example below:
+But if you have to access nested data, you must use **_nesting object_** as in the example below:
 
 ```javascript
 const Table = () => {
