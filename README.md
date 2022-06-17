@@ -1,5 +1,5 @@
 # Get-Fields
-_**getFields**_ was made with the intention of using the same schemas but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call. 
+_**getFields**_ was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.
 
 ## Install with npm
 ```shell
@@ -13,11 +13,11 @@ For example, if we want to create a schema to access user data, we can use this 
 import getFields from "get-fields";
 
 export function GET_USER() {
-  const fields = getFields(arguments); // ~> Returns the selected fields
+  const fields = getFields(arguments); // Returns the selected fields
   return gql`
     query {
       getUser {
-        ${fields}	// Adds the selected fields inside the *route*
+        ${fields}  // Adds the selected fields inside the *route*
       }
     }`;
 }
@@ -26,10 +26,13 @@ export function GET_USER() {
 
 When using the schema, you must pass the fields you want to return separated by commas.
 ```javascript
-const { data } = useQuery(GET_USER("id", "name", "contact"))
+const Profile = () => {
+	const { data } = useQuery(GET_USER("id", "name", "contact"))
+	// [...]
+}
 ```
 
-But if you have to access nested data, you must use objects as follows in the example below:
+But if you have to access nested data, you must use **_nesting object_** as follows in the example below:
 
 
 ```javascript
@@ -38,8 +41,8 @@ const Table = () => {
     GET_SCHEDULE(
       "id",
       // object usage
-      { name: "createdBy", itens: ["_id", "name", "contact"] }, 
-      { name: "service", itens: ["_id", "duration", "price"] },
+      { name: "createdBy", items: ["_id", "name", "contact"] }, 
+      { name: "service", items: ["_id", "duration", "price"] },
       "date",
       "status"
     )
@@ -49,31 +52,50 @@ const Table = () => {
 };
 ```
 
-The **objects** are used to access the _fields_ of the _fields_.
+The **_nesting object_** are used to access the _fields_ of the _fields_.
 All objects must have two properties:
 
-- name - Field name;
-- itens - Array of fields that will be returned;
+- **name** - Field name;
+- **items** - Array of fields that will be returned:
+	- fields - Strings or _nesting object_.
 
-This object is like:
+Example of using the nesting object:
 
+```javascript
+{ name: "createdBy", items: ["_id", "name", "contact"]}
+```
+The example of using _createdBy_ in graphql schema:
 ```graphql
  query {
   schedules {
-    _id
+    date
     createdBy {
-     _id
+     id
      name
      contact
     }
-    date
-    status
   }
  }
 ```
 
-- The example above would look like this in the object:
+
+
+***Items*** can also receive **_nesting object_**
 
 ```javascript
-{ name: "createdBy", itens: ["_id", "name", "contact"]}
+{ name: "date",  items: ["id", { name: "location", items: ["street", "house"] }] }
+```
+The above example in graphql schema:
+```graphql
+query {
+    schedules {
+      date {
+        id
+        location {
+          street
+          house
+        }
+      }
+    }
+}
 ```

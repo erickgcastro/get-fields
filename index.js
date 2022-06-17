@@ -7,12 +7,12 @@ module.exports = function getFields(...args) {
         fields += i + " ";
         break;
       case "object":
-        if (i.name && i.itens) {
+        if (i.name && i.items) {
           fields += i.name + " { ";
-          i.itens?.map((j) => {
+          i.items?.map((j) => {
             if (typeof j === "object") {
               fields += j.name + " { ";
-              fields += getFields(j.itens) + " ";
+              fields += getFields(j.items) + " ";
               fields += "} ";
             } else {
               let res = getFields(j);
