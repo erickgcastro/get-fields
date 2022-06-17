@@ -1,7 +1,7 @@
 //
-module.exports = function getFields(...args) {
+export default function getFields(...args) {
   let fields = "";
-  for (const i of args) {
+  for (const i of args[0]) {
     switch (typeof i) {
       case "string":
         fields += i + " ";
@@ -12,7 +12,7 @@ module.exports = function getFields(...args) {
           i.items?.map((j) => {
             if (typeof j === "object") {
               fields += j.name + " { ";
-              fields += getFields(j.items) + " ";
+              fields += getFields(...j.items);
               fields += "} ";
             } else {
               let res = getFields(j);
@@ -29,4 +29,4 @@ module.exports = function getFields(...args) {
     }
   }
   return fields;
-};
+}
