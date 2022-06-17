@@ -1,6 +1,6 @@
 {
   "name": "get-fields",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "getFields foi feito com o intuito de usar os mesmos schemas, mas com fields diferentes. Onde não é necessário criar um novo schema, mas sim, alterar os fields na chama da função.",
   "main": "./index.js",
   "scripts": {},
