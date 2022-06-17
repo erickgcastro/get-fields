@@ -1,6 +1,6 @@
 # Get-Fields
 
-_**getFields**_ was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.
+_**get-fields**_ was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.
 
 ## Install with npm
 
