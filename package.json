@@ -1,7 +1,7 @@
 {
   "name": "get-fields",
   "version": "1.0.7",
-  "description": "getFields foi feito com o intuito de usar os mesmos schemas, mas com fields diferentes. Onde não é necessário criar um novo schema, mas sim, alterar os fields na chama da função.",
+  "description": "get-fields was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.",
   "main": "./index.js",
   "scripts": {},
   "repository": {
