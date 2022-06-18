@@ -1,6 +1,6 @@
 {
   "name": "get-fields",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "get-fields was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.",
   "main": "./index.js",
   "scripts": {},
