@@ -8,24 +8,32 @@ module.exports = function getFields(...args) {
         break;
       case "object":
         if (i.name && i.items) {
-          fields += i.name + " { ";
-          i.items?.map((j) => {
-            if (typeof j === "object") {
-              fields += j.name + " { ";
-              fields += getFields(...j.items);
-              fields += "} ";
-            } else {
-              let res = getFields(j);
-              fields += res.split(" ").join("") + " ";
-            }
-          });
-          fields += "} ";
+          if (typeof i.name === "string" && Array.isArray(i.items)) {
+            fields += i.name + " { ";
+            i.items?.map((j) => {
+              if (typeof j === "object") {
+                fields += j.name + " { ";
+                fields += getFields(...j.items);
+                fields += "} ";
+              } else {
+                let res = getFields(j);
+                fields += res.split(" ").join("") + " ";
+              }
+            });
+            fields += "} ";
+          } else {
+            throw new TypeError(
+              "Invalid type - name are not string or items are not array"
+            );
+          }
         }
         break;
       case "function":
         break;
       default:
-        throw new Error("Invalid type - Only string and nesting object are allowed");
+        throw new TypeError(
+          "Invalid type - Only string and nesting object are allowed"
+        );
     }
   }
   return fields;
