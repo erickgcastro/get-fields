@@ -58,9 +58,9 @@ const Table = () => {
 The **_nesting object_** are used to access the _fields_ of the _fields_.
 All objects must have two properties:
 
-- **name** - Field name;
+- **name** - Field name - String;
 - **items** - Array of fields that will be returned:
-  - fields - Strings or _nesting object_.
+  - fields - String or _nesting object_.
 
 Example of using the nesting object:
 
