@@ -13,6 +13,7 @@ npm i get-fields
 For example, if we want to create a schema to access user data, we can use this function in schema creation:
 
 ```javascript
+import { gql } from "@apollo/client";
 import getFields from "get-fields";
 
 export function GET_USER() {
