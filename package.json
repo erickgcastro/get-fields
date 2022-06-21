@@ -1,6 +1,6 @@
 {
   "name": "get-fields",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "get-fields was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.",
   "main": "./index.js",
   "scripts": {},
@@ -9,7 +9,19 @@
     "url": "https://github.com/eusouoerick/get-fields.git"
   },
   "author": "Erick Gabriel limaerick.03@gmail.com",
-  "keywords": [],
+  "keywords": [
+    "react",
+    "graphql",
+    "apollo",
+    "client",
+    "get-fields",
+    "get",
+    "fields",
+    "schema",
+    "query",
+    "util",
+    "utility"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eusouoerick/get-fields/issues"
