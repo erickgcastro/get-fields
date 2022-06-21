@@ -1,7 +1,7 @@
 {
   "name": "get-fields",
-  "version": "1.0.9",
-  "description": "get-fields was made with the intention of using the same graphql schema but with different fields. Where it is not necessary to create a new schema, but change the fields in the function call.",
+  "version": "1.01.0",
+  "description": "Function to help create and use schemas in apollo client.",
   "main": "./index.js",
   "scripts": {},
   "repository": {
@@ -12,6 +12,9 @@
   "keywords": [
     "react",
     "graphql",
+    "gql",
+    "javascript",
+    "js",
     "apollo",
     "client",
     "get-fields",
@@ -19,6 +22,7 @@
     "fields",
     "schema",
     "query",
+    "mutation",
     "util",
     "utility"
   ],
