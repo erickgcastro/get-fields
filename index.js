@@ -13,7 +13,7 @@ module.exports = function getFields(...args) {
             i.items?.map((j) => {
               if (typeof j === "object") {
                 fields += j.name + " { ";
-                fields += getFields(...j.items);
+                fields += getFields(j.items);
                 fields += "} ";
               } else {
                 let res = getFields(j);

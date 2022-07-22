@@ -46,8 +46,8 @@ const Table = () => {
     GET_SCHEDULE(
       "id",
       // object usage
-      { name: "createdBy", items: ["_id", "name", "contact"] },
-      { name: "service", items: ["_id", "duration", "price"] },
+      { name: "createdBy", items: ["id", "name", "contact"] },
+      { name: "service", items: ["id", "duration", "price"] },
       "date",
       "status"
     )
@@ -66,7 +66,7 @@ All objects must have two properties:
 Example of using the nesting object:
 
 ```javascript
-{ name: "createdBy", items: ["_id", "name", "contact"]}
+{ name: "createdBy", items: ["id", "name", "contact"]}
 ```
 
 The example of using _createdBy_ in graphql schema:
