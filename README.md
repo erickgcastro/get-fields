@@ -16,8 +16,8 @@ For example, if we want to create a schema to access user data, we can use this 
 import { gql } from "@apollo/client";
 import getFields from "get-fields";
 
-export function GET_USER() {
-  const fields = getFields(arguments); // Returns the selected fields
+export function GET_USER(...args) {
+  const fields = getFields(args); // Returns the selected fields
   return gql`
     query {
       getUser {
@@ -26,8 +26,6 @@ export function GET_USER() {
     }`;
 }
 ```
-
-- [Arguments object- MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
 
 When using the schema, you must pass the fields you want to return separated by commas.
 
