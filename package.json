@@ -1,6 +1,6 @@
 {
   "name": "get-fields",
-  "version": "1.01.02",
+  "version": "1.01.03",
   "description": "Function to help create and use schemas in apollo client.",
   "main": "./index.js",
   "scripts": {},
@@ -26,7 +26,7 @@
     "util",
     "utility"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eusouoerick/get-fields/issues"
   },
