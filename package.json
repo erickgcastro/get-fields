@@ -1,12 +1,12 @@
 {
   "name": "get-fields",
-  "version": "1.01.03",
+  "version": "1.01.04",
   "description": "Function to help create and use schemas in apollo client.",
   "main": "./index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/eusouoerick/get-fields.git"
+    "url": "https://github.com/erickgcastro/get-fields.git"
   },
   "author": "Erick Gabriel limaerick.03@gmail.com",
   "keywords": [
@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eusouoerick/get-fields/issues"
+    "url": "https://github.com/erickgcastro/get-fields/issues"
   },
-  "homepage": "https://github.com/eusouoerick/get-fields"
+  "homepage": "https://github.com/erickgcastro/get-fields"
 }
